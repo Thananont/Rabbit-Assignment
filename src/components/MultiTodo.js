@@ -81,6 +81,7 @@ const TodoList = observer(({ store }) => {
     content === ""
       ? alert("Please put a title of your task")
       : store.addTodo(content);
+    document.getElementById("myInput").value = "";
   };
 
   return (
