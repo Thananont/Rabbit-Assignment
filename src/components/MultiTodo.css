@@ -14,8 +14,6 @@ p {
   max-width: 50%;
 }
 
-/* #ffbc00; */
-
 /* Display */
 .display {
   text-align: center;
@@ -95,7 +93,6 @@ input[type="checkbox"] {
   height: 25px;
   width: 25px;
   background-color: #eee;
-  color: green;
 }
 
 .addBtn {

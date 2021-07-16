@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { makeObservable, observable, action, computed } from "mobx";
 import { observer } from "mobx-react-lite";
 import "./MultiTodo.css";
@@ -137,7 +137,7 @@ const TodoView = observer(({ todo }) => {
   };
 
   return (
-    <li>
+    <li className={todo.completed ? "checked" : ""}>
       <p onDoubleClick={onRename}>{todo.task}</p>
       <input
         type="checkbox"
@@ -151,25 +151,7 @@ const TodoView = observer(({ todo }) => {
   );
 });
 
-function mouseListener() {
-  var list = document.querySelector("ul");
-  list.addEventListener(
-    "click",
-    function (ev) {
-      if (ev.target.tagName === "INPUT") {
-        let target = ev.target.parentNode;
-        target.classList.toggle("checked");
-      }
-    },
-    false
-  );
-}
-
 export default function MultiTodo() {
-  useEffect(() => {
-    mouseListener();
-  });
-
   return (
     <div>
       <TodoList store={observableTodoList} />
