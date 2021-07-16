@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+}
+
+/* General CSS */
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  display: inline;
+  overflow-wrap: break-word;
+  max-width: 50%;
+}
+
+/* #ffbc00; */
+
+/* Display */
+.display {
+  text-align: center;
+  background: #ffbc00;
+}
+
+/* List */
+ul li {
+  position: relative;
+  padding: 12px 90px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+ul li:hover {
+  background: #ddd;
+}
+
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+/* Header */
+.header {
+  background-color: #282828;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Input */
+input[type="text"] {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  top: 8px;
+  right: 50px;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  color: green;
+}
+
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
